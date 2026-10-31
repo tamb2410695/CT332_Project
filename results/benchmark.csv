@@ -1,0 +1,9 @@
+problem,layout,algorithm,heuristic,solved,pathLength,pathCost,expandedNodes,generatedNodes,maximumFrontierSize,runtime_ms,runs
+PositionSearchProblem,tinyMaze,dfs,none,True,10,10,14,16,3,0.041555,5
+PositionSearchProblem,tinyMaze,bfs,none,True,8,8,15,16,3,0.035619,5
+PositionSearchProblem,mediumMaze,dfs,none,True,130,130,144,153,9,0.262393,5
+PositionSearchProblem,mediumMaze,bfs,none,True,68,68,269,272,8,0.492729,5
+PositionSearchProblem,bigMaze,dfs,none,True,210,210,390,428,38,0.700506,5
+PositionSearchProblem,bigMaze,bfs,none,True,210,210,620,623,8,1.09469,5
+PositionSearchProblem,customMaze,dfs,none,True,12,12,12,16,4,0.032058,5
+PositionSearchProblem,customMaze,bfs,none,True,4,4,7,10,3,0.022559,5
