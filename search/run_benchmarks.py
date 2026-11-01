@@ -90,7 +90,6 @@ def executeCaseRuns(problemFactory, algorithm, heuristic, runs):
             actions = algorithm(problem, heuristic)
         elapsedMs = (time.perf_counter_ns() - started) / 1_000_000
         metrics = search.getLastSearchMetrics()
-        # Use a separate instance: getSuccessors used for replay increments _expanded.
         validateResult(problemFactory(), actions, metrics)
         observations.append({
             "solved": metrics.solved,
@@ -104,15 +103,6 @@ def executeCaseRuns(problemFactory, algorithm, heuristic, runs):
             "runsPerCase": runs,
         })
     return observations
-
-def executeCase(problemFactory, algorithm, heuristic, runs):
-    observations = executeCaseRuns(problemFactory, algorithm, heuristic, runs)
-    summary = observations[-1].copy()
-    summary["runtime_ms"] = round(
-        statistics.median(row["runtime_ms"] for row in observations), 6
-    )
-    return summary
-
 
 def positionRows(algorithmNames, layoutNames, runs):
     for layoutName in layoutNames:

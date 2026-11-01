@@ -76,9 +76,11 @@ policyMarkers = {
 policyColors = {label: color for label, color in policies.values()}
 monochromeFill = "#f1f5f9"
 
-layoutOrder = ["tinyMaze", "mediumMaze", "bigMaze", "customMaze"]
+layoutOrder = ["tinyMaze", "mediumMaze", "bigMaze", "customMaze", "reportExampleMaze"]
 layoutMethodOrder = [
+    "DFS",
     "BFS",
+    "UCS",
     "A* null",
     "GBFS Manhattan",
     "GBFS Euclidean",

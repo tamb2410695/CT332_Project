@@ -75,7 +75,7 @@ def parseArgs() -> argparse.Namespace:
     parser.add_argument(
         "--charts",
         nargs="+",
-        choices=("all", "medium", "layouts", "tradeoff", "runtime-distribution"),
+        choices=("all", "mazes", "medium", "layouts", "tradeoff", "runtime-distribution"),
         default=["all"],
         metavar="CHART",
         help="chart groups to generate (default: all)",
