@@ -209,9 +209,6 @@ def _bestFirstSearch(problem: SearchProblem, heuristic: Callable ):
             return _actionsFrom(node)
 
         expanded += 1
-
-        if expanded > 10000:
-            util.TimeoutFunctionException()
         for successor, action, step_cost in problem.getSuccessors(node.state):
             new_cost = node.pathCost + step_cost
             if new_cost < bestCost.get(successor, float("inf")):

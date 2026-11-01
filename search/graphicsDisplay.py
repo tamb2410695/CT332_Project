@@ -118,7 +118,7 @@ class InfoPane:
             t = text( self.toScreen(self.width//2 + self.width//8 * i, 0), GHOST_COLORS[i+1], d, "Times", size, "bold")
             self.ghostDistanceText.append(t)
 
-    def updateScore(self, score):
+    # def updateScore(self, score):
         changeText(self.scoreText, "SCORE: % 4d" % score)
 
     def setTeam(self, isBlue):
@@ -249,7 +249,7 @@ class PacmanGraphics:
             self.removeFood(newState._foodEaten, self.food)
         if newState._capsuleEaten != None:
             self.removeCapsule(newState._capsuleEaten, self.capsules)
-        self.infoPane.updateScore(newState.score)
+#         self.infoPane.updateScore(newState.score)
         if 'ghostDistances' in dir(newState):
             self.infoPane.updateGhostDistances(newState.ghostDistances)
 
